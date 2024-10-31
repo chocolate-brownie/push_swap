@@ -6,7 +6,7 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:28:08 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/10/30 16:06:09 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:39:59 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-void				error_exit(void);
+void				error_exit(char *msg);
 
 t_stack				*parse_input(int argc, char **argv);
 int					is_valid_number(const char *str);

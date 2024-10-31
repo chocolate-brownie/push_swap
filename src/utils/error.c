@@ -6,14 +6,14 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:29:56 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/10/30 15:30:01 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:03:08 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error_exit(void)
+void	error_exit(char *msg)
 {
-	write(2, "Error\n", 6);
+	write(2, &msg, ft_strlen(msg));
 	exit(EXIT_FAILURE);
 }
