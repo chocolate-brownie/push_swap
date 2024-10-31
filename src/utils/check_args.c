@@ -6,7 +6,7 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:44:15 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/10/31 17:45:06 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:20:09 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	number_args(int argc, char **argv)
 {
 	int	i;
 
+	printf("Running number args\n");
 	i = 1;
 	while (i < argc)
 	{
@@ -39,6 +40,7 @@ int	string_args(char *str)
 {
 	int	i;
 
+	printf("Running string args\n");
 	i = 0;
 	while (str[i])
 	{
