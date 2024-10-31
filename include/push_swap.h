@@ -6,7 +6,7 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:28:08 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/10/31 17:12:25 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:46:18 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,8 @@ void				init_stack(t_stack **a, t_stack **b);
 
 /* args manipulation */
 int					check_args(int argc, char **argv);
+int					number_args(int argc, char **argv);
+int					string_args(char *str);
+int					is_valid_number(char *str);
+
 #endif
