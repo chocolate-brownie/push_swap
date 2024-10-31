@@ -6,7 +6,7 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:28:08 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/10/31 11:39:59 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:51:14 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-void				error_exit(char *msg);
+void				error_exit(void);
 
 t_stack				*parse_input(int argc, char **argv);
 int					is_valid_number(const char *str);
@@ -50,5 +50,7 @@ void				small_sort(t_stack **a, t_stack **b, int size);
 void				free_stack(t_stack *stack);
 int					stack_size(t_stack *stack);
 int					is_sorted(t_stack *stack);
+
+void				print_stack(t_stack *stack);
 
 #endif
