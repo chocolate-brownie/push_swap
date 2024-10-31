@@ -6,16 +6,20 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:25:49 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/10/31 12:49:55 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:44:24 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	main(int argc, char **argv)
 {
-	t_stack	*a;
-	t_stack	*b;
+	t_stack	*stk_a;
+	t_stack	*stk_b;
 
-    
+	init_stack(&stk_a, &stk_b);
+	if (!check_args(argc, argv))
+		error_exit();
+	return (0);
 }
+
