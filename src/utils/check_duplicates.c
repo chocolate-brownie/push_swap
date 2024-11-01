@@ -1,19 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stacks.c                                           :+:      :+:    :+:   */
+/*   check_duplicates.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 13:12:29 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/11/01 13:12:59 by mgodawat         ###   ########.fr       */
+/*   Created: 2024/11/01 16:58:00 by mgodawat          #+#    #+#             */
+/*   Updated: 2024/11/01 16:58:01 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
-
-void	init_stack_null(t_list **stk_a, t_list **stk_b)
-{
-	*stk_a = NULL;
-	*stk_b = NULL;
-}
