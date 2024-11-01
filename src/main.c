@@ -6,7 +6,7 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:25:49 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/11/01 18:17:42 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:43:51 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ t_list	*handle_arguments(int argc, char **argv)
 		stk_a = split_and_push(argv[1], stk_a);
 	else
 	{
-		i = 0;
+		i = 1;
 		while (i < argc)
 		{
 			stk_a = push_numbers_to_stack(argv[i], stk_a);
