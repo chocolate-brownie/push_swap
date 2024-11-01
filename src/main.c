@@ -6,7 +6,7 @@
 /*   By: mgodawat <mgodawat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:25:49 by mgodawat          #+#    #+#             */
-/*   Updated: 2024/11/01 17:17:04 by mgodawat         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:17:42 by mgodawat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,8 @@ int	main(int argc, char **argv)
 	t_list	*stk_b;
 
 	init_stack_null(&stk_a, &stk_b);
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		error_exit();
-	else if (argc == 2)
-	{
-		stk_a = split_and_push(argv[1]);
-		print_list(stk_a);
-		printf("\n");
-		print_list(stk_b);
-	}
+	stk_a = handle_arguments(argc, argv);
+	print_list(stk_a);
 	/*
 	if (!stk_a || check_duplicates(stk_a))
 		error_exit();
@@ -51,4 +44,26 @@ void	print_list(t_list *head)
 		printf("%d ", head->data);
 		head = head->next;
 	}
+}
+
+t_list	*handle_arguments(int argc, char **argv)
+{
+	t_list	*stk_a;
+	int		i;
+
+	stk_a = NULL;
+	if (argc == 1 || (argc == 2 && !argv[1][0]))
+		error_exit();
+	if (argc == 2)
+		stk_a = split_and_push(argv[1], stk_a);
+	else
+	{
+		i = 0;
+		while (i < argc)
+		{
+			stk_a = push_numbers_to_stack(argv[i], stk_a);
+			i++;
+		}
+	}
+	return (stk_a);
 }
